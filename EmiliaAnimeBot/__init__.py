@@ -5,6 +5,7 @@ import time
 import spamwatch
 
 import telegram.ext as tg
+from aiohttp import ClientSession
 from telethon import TelegramClient
 from pyrogram import Client, errors
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
@@ -183,6 +184,7 @@ pgram = Client("EmiPyro", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client.EmiliaAnimeBot
 dispatcher = updater.dispatcher
+aiohttpsession = ClientSession()
 
 DRAGONS = list(DRAGONS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
