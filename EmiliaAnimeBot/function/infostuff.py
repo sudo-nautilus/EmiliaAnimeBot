@@ -3,8 +3,8 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message
 
-from wbb import SUDOERS, app
-from wbb.core.sections import section
+from EmiliaAnimeBot import pgram as app
+from EmiliaAnimeBot.core.sections import section
 from wbb.utils.dbfunctions import is_gbanned_user, user_global_karma
 
 async def get_user_info(user, already=False):
