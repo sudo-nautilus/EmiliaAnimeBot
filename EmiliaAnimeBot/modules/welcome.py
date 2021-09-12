@@ -37,6 +37,10 @@ from telegram.ext import (
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
+
+
+OWNER_WELCOME_IMG = "https://telegra.ph/file/61a81e8e8f4cb3d16cd90.jpg"
+
 VALID_WELCOME_FORMATTERS = [
     "first",
     "last",
@@ -168,20 +172,30 @@ def new_member(update: Update, context: CallbackContext):
                     pass
                 reply = False
 
+                """
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text(
-                    "Owner Sama just Entered the Chat",
-                    reply_to_message_id=reply)
-                welcome_log = (f"{html.escape(chat.title)}\n"
-                               f"#USER_JOINED\n"
-                               f"Bot Owner just joined the chat")
+                update.effective_message.reply_photo(
+                    OWNER_WELCOME_IMG, caption= "<code>Izumi Entered The Chat</code>"
+                     ),
+                     parse_mode=ParseMode.HTML,
+                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Surprise!", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ")]])
                 continue
 
-            # Welcome Devs
-            elif new_mem.id in DEV_USERS:
+            # Welcoming my Alt(for tests Lol)
+            if new_mem.id == 1947860028:
+                update.effective_message.reply_photo(
+                    OWNER_WELCOME_IMG, caption= "<code>Izumi Entered The Chat</code>"
+                     ),
+                     parse_mode=ParseMode.HTML,
+                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Surprise!", url="https://www.youtube.com/watch?v=dQw4w9WgXcQ")]])
+  
+                continue
+                """
+             # Welcome Owner
+            elif new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "A member of the Dev Team Just Joined",
+                    "A Member of the Sudo Team Just Joined",
                     reply_to_message_id=reply,
                 )
                 continue
