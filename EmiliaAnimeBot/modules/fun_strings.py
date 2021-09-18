@@ -87,8 +87,8 @@ TRUTH_STRINGS = (
     "Have you ever eaten something off the floor?",
     "Do you like hanging out with your parents?",
     "What is something that no one else knows about you? (6_9)",
-                                                            
-     )
+
+)
 
 DARE_STRINGS = (
     "Make up a story about any item that comes in your mind *right now*",
@@ -101,23 +101,23 @@ DARE_STRINGS = (
     "Think about a word starts with T and it must be longer then 8 letters. After that Write that word *backwards* in 17 seconds",
     "Think about a word starts with E and it must be longer then 6 letters. After that Write that word *backwards* in 17 seconds",
 
-     )
+)
 
 IGRIS_IMG = (
-     "https://telegra.ph/file/17f7cf494420f54a4c53a.jpg",
-     "https://telegra.ph/file/aebd88f3b99e53e144f63.jpg",
-     "https://telegra.ph/file/2f4a5342b4e5a11f79b3a.jpg",
-     "https://telegra.ph/file/6ae266b389380d0edc23b.jpg"
+    "https://telegra.ph/file/17f7cf494420f54a4c53a.jpg",
+    "https://telegra.ph/file/aebd88f3b99e53e144f63.jpg",
+    "https://telegra.ph/file/2f4a5342b4e5a11f79b3a.jpg",
+    "https://telegra.ph/file/6ae266b389380d0edc23b.jpg"
 
-     ) 
+)
 
 CUTVEIN_IMG = (
-     "https://i.imgur.com/oMZKEhh.jpg",
-     "https://i.imgur.com/O6GMp5h.jpg",
-     "https://i.imgur.com/FE2hhCH.jpg",
-     "https://i.imgur.com/HmDi7Cr.jpg"
+    "https://i.imgur.com/oMZKEhh.jpg",
+    "https://i.imgur.com/O6GMp5h.jpg",
+    "https://i.imgur.com/FE2hhCH.jpg",
+    "https://i.imgur.com/HmDi7Cr.jpg"
 
-     )
+)
 
 INSULT_STRINGS = [
     "Owww ... Such a stupid idiot.",
@@ -181,33 +181,33 @@ INSULT_STRINGS = [
 ]
 
 IGRIS_STRINGS = (
-      "YES Human, tell me", 
-      "You remembered me?", 
-      "Pshycho Demon is here!", 
-      "I Only Serve To the Devil, JUST KIDDING", 
-      "When is our next Gamble?", 
-      "*You have Summoned the most Powerful pshycho Demon*", 
-      "STOP calling ME if you don't wanna gamble", 
-      "Here we go again", 
-      "Yumeko,*Joined the Gambling Area*", 
-      "Yaaaaaaa?", 
-      "Yumeko.EXE STOPPED WORKING", 
-      "Okay, Let's Go", 
-      "Let's do this", 
-      " Boring ", 
-      "Hold up, Coming"
-    
-      ) 
-     
+    "YES Human, tell me",
+    "You remembered me?",
+    "Pshycho Demon is here!",
+    "I Only Serve To the Devil, JUST KIDDING",
+    "When is our next Gamble?",
+    "*You have Summoned the most Powerful pshycho Demon*",
+    "STOP calling ME if you don't wanna gamble",
+    "Here we go again",
+    "Yumeko,*Joined the Gambling Area*",
+    "Yaaaaaaa?",
+    "Yumeko.EXE STOPPED WORKING",
+    "Okay, Let's Go",
+    "Let's do this",
+    " Boring ",
+    "Hold up, Coming"
+
+)
+
 IGRIS_PHOTO = (
-    "https://wallpapercave.com/wp/wp2164441.jpg") 
+    "https://wallpapercave.com/wp/wp2164441.jpg")
 
 
 GIFS = [
     'CgACAgUAAx0EVmwfqQACElhfo3yZv1njCC11INcQSAi4UlN8vwACqwADg_8wVeGSv41OYU6zHgQ',
     'CgACAgUAAx0CVmwfqQACEoZfo4AAAcduM428ax1T0y-zo1tXdFUAAlUBAAJu09hWrXoj81vn9B8eBA',
-    'CgACAgQAAx0CVmwfqQACEodfo4AAAdRGH1X6XUseFvY1X6raVGkAAmgIAAJWQ9FR6NdhTVfyDzgeBA', 
-    'CgACAgQAAxkBAAN4X7oiKAOFtoB2nH-3GRCTclxJapsAAm4CAAKUq5VSwanbaqA_tZceBA', 
+    'CgACAgQAAx0CVmwfqQACEodfo4AAAdRGH1X6XUseFvY1X6raVGkAAmgIAAJWQ9FR6NdhTVfyDzgeBA',
+    'CgACAgQAAxkBAAN4X7oiKAOFtoB2nH-3GRCTclxJapsAAm4CAAKUq5VSwanbaqA_tZceBA',
     'CgACAgQAAxkBAAN5X7oiMA8mY1BZGp5I4VdfoDg-oH8AAksCAAIstI1SCcfAOJunTIEeBA'
 ]
 
@@ -321,12 +321,12 @@ SLAP_TEMPLATES = (
     "Zekxx Threw his Demon Sword on {user2}!",
     "{user1} took all of {user2}'s cookies.",
     "{user2} wa mou.......Shindeiru! - {user1}.",
-    "{user2} lost his race piece!",  #No game no life reference
-    "Shut up {user2}, you are just {user2}.",  #No game no life reference
-    "{user1} hits {user2} with Aka si anse!",  #No game no life reference
-    "@NeoTheKitty scratches {user2}",  #Pixels pet cat - @NeoTheKitty 
-    "Majin buu ate {user2}",  #Dbz
-    "Goblin slayer slays {user2}",  #Goblin Slayer
+    "{user2} lost his race piece!",  # No game no life reference
+    "Shut up {user2}, you are just {user2}.",  # No game no life reference
+    "{user1} hits {user2} with Aka si anse!",  # No game no life reference
+    "@NeoTheKitty scratches {user2}",  # Pixels pet cat - @NeoTheKitty
+    "Majin buu ate {user2}",  # Dbz
+    "Goblin slayer slays {user2}",  # Goblin Slayer
 )
 
 PAT_TEMPLATES = (
@@ -338,32 +338,32 @@ PAT_TEMPLATES = (
     "*{user2}'s waifu pats their head*",
     "*{user2}'s got free headpats*",
     "No pats for {user2}!",
-    
+
 )
 
 PAT_GIFS = (
     "CgACAgQAAxkBAALRX19Xs7tBdOH1gQwS_rglVRkTbgVYAAKEAgACmQn9UWlyGa_xy9_aGwQ",
-    "CgACAgEAAxkBAALRYF9Xs8EnhsDfDpld3ILoqTbzDmwxAAJFAAOJxjlHECanwn69E5QbBA", 
-    "CgACAgQAAxkBAAO5X7olTkYuRTw1AV__6mFehORkP4QAAiMCAAI3KIxSjBqOTuo4xf0eBA", 
-    "CgACAgQAAxkBAAO6X7olTklDbgs9nr5bNbM9xy0uunUAAmACAAL1G4xSKOH5wmDvxy4eBA", 
+    "CgACAgEAAxkBAALRYF9Xs8EnhsDfDpld3ILoqTbzDmwxAAJFAAOJxjlHECanwn69E5QbBA",
+    "CgACAgQAAxkBAAO5X7olTkYuRTw1AV__6mFehORkP4QAAiMCAAI3KIxSjBqOTuo4xf0eBA",
+    "CgACAgQAAxkBAAO6X7olTklDbgs9nr5bNbM9xy0uunUAAmACAAL1G4xSKOH5wmDvxy4eBA",
     "CgACAgQAAxkBAAIViWDBew94TiaL_c9HyX0xpUY8wFy2AAJKAgACMU80Urc2Hvh_WMDeHwQ",
-    "CgACAgQAAxkBAAO7X7olTq_mAur7bsieTD5QnyQ06rUAAlwCAAINjoRSWyAJKJ9n2moeBA") 
+    "CgACAgQAAxkBAAO7X7olTq_mAur7bsieTD5QnyQ06rUAAlwCAAINjoRSWyAJKJ9n2moeBA")
 
 PAT_STICKERS = (
     "CAACAgQAAxkBAALRWV9Xs4HH0XaXfhZe-jWaZoXfs-IsAAJYAwACdDgSEHYOt4KvL02oGwQ",
-    "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ", 
+    "CAACAgQAAxkBAALRXF9Xs6XmIeDbnoL1wiDky0TdX-CvAAKKAQAC1TMzC9A3CtiT2rqVGwQ",
     "CAACAgQAAxkBAAPCX7ol0GGF-58u9AfabFk_16ehVXEAArUAA9UzMwuz7SpKK9TonB4E",
-    "CAACAgQAAxkBAAPDX7ol2ixI5WdJ48h8rQYbc__6KisAAt8AA9UzMwusEnTVQ5yoAh4E", 
-    "CAACAgQAAxkBAAPEX7ol55uzT-EkbHOkA-_94MiMcBgAAvAAA9UzMws7KHpoG8wBjh4E") 
+    "CAACAgQAAxkBAAPDX7ol2ixI5WdJ48h8rQYbc__6KisAAt8AA9UzMwusEnTVQ5yoAh4E",
+    "CAACAgQAAxkBAAPEX7ol55uzT-EkbHOkA-_94MiMcBgAAvAAA9UzMws7KHpoG8wBjh4E")
 
 IGRIS_STICKERS = (
-      "CAACAgUAAxkBAAIDQF-7_69odiU6ityjRjqRcknwgEi4AAKRAANpkK04stJbSpXkS-geBA",
-      "CAACAgUAAxkBAAIDP1-7_6lnPR1y5P7R6BqCBHEsyL2WAAKQAANpkK045aq_E5n7-ogeBA", 
-      "CAACAgUAAxkBAAIDPl-7_6MG9sSVGmdnXXKbofCqhHl6AAKPAANpkK047gg7KKlXdb4eBA", 
-      "CAACAgUAAxkBAAIDPV-7_6CbPPi7U2Bz27SQFgQPWlM8AAKOAANpkK04CM9qcoyutvceBA") 
+    "CAACAgUAAxkBAAIDQF-7_69odiU6ityjRjqRcknwgEi4AAKRAANpkK04stJbSpXkS-geBA",
+    "CAACAgUAAxkBAAIDP1-7_6lnPR1y5P7R6BqCBHEsyL2WAAKQAANpkK045aq_E5n7-ogeBA",
+    "CAACAgUAAxkBAAIDPl-7_6MG9sSVGmdnXXKbofCqhHl6AAKPAANpkK047gg7KKlXdb4eBA",
+    "CAACAgUAAxkBAAIDPV-7_6CbPPi7U2Bz27SQFgQPWlM8AAKOAANpkK04CM9qcoyutvceBA")
 
 PING_STRING = (
-    " PONG!!! ", 
+    " PONG!!! ",
     "I am here!",
 )
 
@@ -398,7 +398,7 @@ THROW = (
     "flings",
     "chucks",
     "hurls",
-    "Demon sword", 
+    "Demon sword",
 )
 
 HIT = (
@@ -467,10 +467,10 @@ EARS = [
 TOSS = (
     "Heads",
     "Tails",
-    "Yumeko sent coin to Hell", 
+    "Yumeko sent coin to Hell",
 )
 
-DECIDE = ("Yes.", "No.", "Maybe.", " Ask Devil.","Don't ask me.")
+DECIDE = ("Yes.", "No.", "Maybe.", " Ask Devil.", "Don't ask me.")
 
 TABLE = ("(╯°□°）╯彡 ┻━┻", "I ran out of tables, will order more.",
          "Go do some work instead of flippin tables.")

@@ -4,9 +4,9 @@ import os
 from typing import Optional
 
 from EmiliaAnimeBot import (DEV_USERS, OWNER_ID, DRAGONS, SUPPORT_CHAT, DEMONS,
-                          TIGERS, WOLVES, dispatcher)
+                            TIGERS, WOLVES, dispatcher)
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (dev_plus, sudo_plus,
-                                                           whitelist_plus)
+                                                             whitelist_plus)
 from EmiliaAnimeBot.modules.helper_funcs.extraction import extract_user
 from EmiliaAnimeBot.modules.log_channel import gloggable
 from telegram import ParseMode, TelegramError, Update
@@ -31,15 +31,15 @@ def check_user_id(user_id: int, context: CallbackContext) -> Optional[str]:
 
 
 # This can serve as a deeplink example.
-#disasters =
+# disasters =
 # """ Text here """
 
 # do not async, not a handler
-#def send_disasters(update):
+# def send_disasters(update):
 #    update.effective_message.reply_text(
 #        disasters, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
 
-### Deep link example ends
+# Deep link example ends
 
 
 @run_async
@@ -523,23 +523,27 @@ def paradise(update: Update, context: CallbackContext):
     update.effective_message.reply_text(reply, parse_mode=ParseMode.HTML)
 
 
-
-SUDO_HANDLER = CommandHandler(("addcommandment", "addtendemon"), addcommandment)
+SUDO_HANDLER = CommandHandler(
+    ("addcommandment", "addtendemon"), addcommandment)
 ADDSUPREME_HANDLER = CommandHandler(("addsupreme", "addsdemon"), addsupreme)
 ADDWARLEVEL_HANDLER = CommandHandler(("addwarlevel"), addwarlevel)
 ADDRACE_HANDLER = CommandHandler(("addrace", "adddemon"), addrace)
-UNSUDO_HANDLER = CommandHandler(("removecommandment", "removecommandment"), removecommandment)
+UNSUDO_HANDLER = CommandHandler(
+    ("removecommandment", "removecommandment"), removecommandment)
 REMOVESUPREME_HANDLER = CommandHandler(("removesupreme", "removesupreme"),
-                                   removesupreme)
-REMOVEWARCOMMANDER_HANDLER = CommandHandler(("removewarcommander"), removewarcommander)
+                                       removesupreme)
+REMOVEWARCOMMANDER_HANDLER = CommandHandler(
+    ("removewarcommander"), removewarcommander)
 REMOVERACE_HANDLER = CommandHandler(("removerace", "removedemon"),
-                                     removerace)
+                                    removerace)
 
 DEMONRACE_HANDLER = CommandHandler(["demonrace", "racemembers"],
-                                       demonrace)
+                                   demonrace)
 WARCOMMANDERS_HANDLER = CommandHandler(["warcommanders"], warcommanders)
-SUPREMEDEMONS_HANDLER = CommandHandler(["supremedemons", "sdemons"], supremedemons)
-COMMANDMENTS_HANDLER = CommandHandler(["commandments", "tendemons"], commandments)
+SUPREMEDEMONS_HANDLER = CommandHandler(
+    ["supremedemons", "sdemons"], supremedemons)
+COMMANDMENTS_HANDLER = CommandHandler(
+    ["commandments", "tendemons"], commandments)
 PARADISE_HANDLER = CommandHandler(["paradise", "paradise"], paradise)
 
 dispatcher.add_handler(SUDO_HANDLER)
@@ -562,4 +566,3 @@ __handlers__ = [
     UNSUDO_HANDLER, REMOVESUPREME_HANDLER, REMOVEWARCOMMANDER_HANDLER, REMOVERACE_HANDLER,
     DEMONRACE_HANDLER, WARCOMMANDERS_HANDLER, COMMANDMENTS_HANDLER, PARADISE_HANDLER
 ]
- 

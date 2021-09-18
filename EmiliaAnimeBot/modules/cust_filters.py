@@ -169,7 +169,7 @@ def filters(update, context):
         else:
             text_to_parsing = ""
         offset = len(text_to_parsing
-                    )  # set correct offset relative to command + notename
+                     )  # set correct offset relative to command + notename
         text, buttons = button_markdown_parser(
             text_to_parsing, entities=msg.parse_entities(), offset=offset)
         text = text.strip()
@@ -189,7 +189,7 @@ def filters(update, context):
         else:
             text_to_parsing = ""
         offset = len(text_to_parsing
-                    )  # set correct offset relative to command + notename
+                     )  # set correct offset relative to command + notename
         text, buttons = button_markdown_parser(
             text_to_parsing, entities=msg.parse_entities(), offset=offset)
         text = text.strip()
@@ -317,10 +317,12 @@ def reply_filter(update, context):
                             return
                         except BadRequest as excp:
                             if excp.message == 'Wrong remote file identifier specified: wrong padding in the string':
-                                context.bot.send_message(chat.id, "Message couldn't be sent, Is the sticker id valid?")
+                                context.bot.send_message(
+                                    chat.id, "Message couldn't be sent, Is the sticker id valid?")
                                 return
                             else:
-                                LOGGER.exception("Error in filters: " + excp.message)
+                                LOGGER.exception(
+                                    "Error in filters: " + excp.message)
                                 return
                     valid_format = escape_invalid_curly_brackets(
                         text, VALID_WELCOME_FORMATTERS)

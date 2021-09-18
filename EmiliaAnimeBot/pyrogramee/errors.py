@@ -4,6 +4,7 @@ import traceback
 from functools import wraps
 from EmiliaAnimeBot import LOG_GROUP_ID, pgram
 
+
 def split_limits(text):
     if len(text) < 2048:
         return [text]
@@ -21,6 +22,7 @@ def split_limits(text):
         result.append(small_msg)
 
     return result
+
 
 def capture_err(func):
     @wraps(func)

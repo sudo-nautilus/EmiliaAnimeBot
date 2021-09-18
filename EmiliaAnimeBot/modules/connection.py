@@ -138,7 +138,8 @@ def connect_chat(update, context):
                     )
                     sql.add_history_conn(user.id, str(conn_chat.id), chat_name)
                 else:
-                    send_message(update.effective_message, "Connection failed!")
+                    send_message(update.effective_message,
+                                 "Connection failed!")
             else:
                 send_message(update.effective_message,
                              "Connection to this chat is not allowed!")
@@ -262,7 +263,7 @@ def connected(bot: Bot, update: Update, chat, user_id, need_admin=True):
         isallow = sql.allow_connect_to_chat(conn_id)
 
         if ((isadmin) or (isallow and ismember) or (user.id in DRAGONS) or
-            (user.id in DEV_USERS)):
+                (user.id in DEV_USERS)):
             if need_admin is True:
                 if (getstatusadmin.status in ("administrator", "creator") or
                         user_id in DRAGONS or user.id in DEV_USERS):
@@ -307,7 +308,8 @@ def help_connect_chat(update, context):
                      "PM me with that command to get help.")
         return
     else:
-        send_message(update.effective_message, CONN_HELP, parse_mode="markdown")
+        send_message(update.effective_message,
+                     CONN_HELP, parse_mode="markdown")
 
 
 @run_async

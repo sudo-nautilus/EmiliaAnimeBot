@@ -11,7 +11,7 @@ DEFAULT_WELCOME = 'Hey {first}, how are you?'
 DEFAULT_GOODBYE = 'Nice knowing ya!'
 
 DEFAULT_WELCOME_MESSAGES = [
-    "{first} is here!",  #Discord welcome messages copied
+    "{first} is here!",  # Discord welcome messages copied
     "Ready player {first}",
     "Genos, {first} is here.",
     "A wild {first} appeared.",
@@ -52,22 +52,24 @@ DEFAULT_WELCOME_MESSAGES = [
     "Roses are red, violets are blue, {first} joined this chat with you",
     "Welcome {first}, Avoid Punches if you can!",
     "It's a bird! It's a plane! - Nope, its {first}!",
-    "{first} Joined! - Ok.",  #Discord welcome messages end.
+    "{first} Joined! - Ok.",  # Discord welcome messages end.
     "All Hail {first}!",
     "Hi, {first}. Don't lurk, only Villans do that.",
     "{first} has joined the battle bus.",
-    "A new Challenger enters!",  #Tekken
+    "A new Challenger enters!",  # Tekken
     "Ok!",
     "{first} just fell into the chat!",
     "Something just fell from the sky! - oh, its {first}.",
     "{first} Just teleported into the chat!",
-    "Hi, {first}, show me your Hunter License!",  #Hunter Hunter
-    "I'm looking for Garo, oh wait nvm it's {first}.",  #One Punch man s2
+    "Hi, {first}, show me your Hunter License!",  # Hunter Hunter
+    "I'm looking for Garo, oh wait nvm it's {first}.",  # One Punch man s2
     "Welcome {first}, leaving is not an option!",
     "Run Forest! ..I mean...{first}.",
-    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",  #One Punch ma
-    "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",  #One Punch ma 
-    "Hey, {first}, ever heard the King Engine?",  #One Punch ma
+    # One Punch ma
+    "{first} do 100 push-ups, 100 sit-ups, 100 squats, and 10km running EVERY SINGLE DAY!!!",
+    # One Punch ma
+    "Huh?\nDid someone with a disaster level just join?\nOh wait, it's just {first}.",
+    "Hey, {first}, ever heard the King Engine?",  # One Punch ma
     "Hey, {first}, empty your pockets.",
     "Hey, {first}!, are you strong?",
     "Call the Avengers! - {first} just joined the chat.",
@@ -91,7 +93,8 @@ DEFAULT_WELCOME_MESSAGES = [
     "Everyone stop what you’re doing, We are now in the presence of {first}.",
     "Hey {first}, do you wanna know how I got these scars?",
     "Welcome {first}, drop your weapons and proceed to the spy scanner.",
-    "Stay safe {first}, Keep 3 meters social distances between your messages.",  #Corona memes lmao
+    # Corona memes lmao
+    "Stay safe {first}, Keep 3 meters social distances between your messages.",
     "Hey {first}, Do you know I once One-punched a meteorite?",
     "You’re here now {first}, Resistance is futile",
     "{first} just arrived, the force is strong with this one.",
@@ -111,32 +114,34 @@ DEFAULT_WELCOME_MESSAGES = [
     "Behold my new evil scheme, the {first}-Inator.",
     "Ah, {first} the Platypus, you're just in time... to be trapped.",
     "*snaps fingers and teleports {first} here*",
-    "{first}! What is a fish and a rabbit combined?",  #Lifereload - kaizoku member.
-    "{first} just arrived. Diable Jamble!",  #One Piece Sanji
-    "{first} just arrived. Aschente!",  #No Game No Life
-    "{first} say Aschente to swear by the pledges.",  #No Game No Life
-    "{first} just joined. El Psy congroo!",  #Steins Gate
-    "Irasshaimase {first}!",  #weeabo shit
-    "Hi {first}, what is 1000-7?",  #tokyo ghoul
-    "Come. I don't want to destroy this place",  #hunter x hunter
-    "I... am... Whitebeard!...wait..wrong anime.",  #one Piece
-    "Hey {first}...have you ever heard these words?",  #BNHA
-    "Can't a guy get a little sleep around here?",  #Kamina Falls – Gurren Lagann
-    "It's time someone put you in your place, {first}.",  #Hellsing
-    "Unit-01's reactivated..",  #Neon Genesis: Evangelion
-    "Prepare for trouble...And make it double",  #Pokemon
-    "Hey {first}, are You Challenging Me?",  #Shaggy
-    "Oh? You're Approaching Me?",  #jojo
+    # Lifereload - kaizoku member.
+    "{first}! What is a fish and a rabbit combined?",
+    "{first} just arrived. Diable Jamble!",  # One Piece Sanji
+    "{first} just arrived. Aschente!",  # No Game No Life
+    "{first} say Aschente to swear by the pledges.",  # No Game No Life
+    "{first} just joined. El Psy congroo!",  # Steins Gate
+    "Irasshaimase {first}!",  # weeabo shit
+    "Hi {first}, what is 1000-7?",  # tokyo ghoul
+    "Come. I don't want to destroy this place",  # hunter x hunter
+    "I... am... Whitebeard!...wait..wrong anime.",  # one Piece
+    "Hey {first}...have you ever heard these words?",  # BNHA
+    "Can't a guy get a little sleep around here?",  # Kamina Falls – Gurren Lagann
+    "It's time someone put you in your place, {first}.",  # Hellsing
+    "Unit-01's reactivated..",  # Neon Genesis: Evangelion
+    "Prepare for trouble...And make it double",  # Pokemon
+    "Hey {first}, are You Challenging Me?",  # Shaggy
+    "Oh? You're Approaching Me?",  # jojo
     "{first} just warped into the group!",
     "I..it's..it's just {first}.",
     "Sugoi, Dekai. {first} Joined!",
-    "{first}, do you know gods of death love apples?",  #Death Note owo
-    "I'll take a potato chip.... and eat it",  #Death Note owo
-    "Oshiete oshiete yo sono shikumi wo!",  #Tokyo Ghoul
-    "Kaizoku ou ni...nvm wrong anime.",  #op
-    "{first} just joined! Gear.....second!",  #Op
+    "{first}, do you know gods of death love apples?",  # Death Note owo
+    "I'll take a potato chip.... and eat it",  # Death Note owo
+    "Oshiete oshiete yo sono shikumi wo!",  # Tokyo Ghoul
+    "Kaizoku ou ni...nvm wrong anime.",  # op
+    "{first} just joined! Gear.....second!",  # Op
     "Omae wa mou....shindeiru",
-    "Hey {first}, the leaf village lotus blooms twice!",  #Naruto stuff begins from here
+    # Naruto stuff begins from here
+    "Hey {first}, the leaf village lotus blooms twice!",
     "{first} Joined! Omote renge!",
     "{first} joined!, Gate of Opening...open!",
     "{first} joined!, Gate of Healing...open!",
@@ -147,11 +152,12 @@ DEFAULT_WELCOME_MESSAGES = [
     "{first} joined!, Gate of Shock...open!",
     "{first} joined!, Gate of Death...open!",
     "{first}! I, Madara! declare you the strongest",
-    "{first}, this time I'll lend you my power. ",  #Kyuubi to naruto
+    "{first}, this time I'll lend you my power. ",  # Kyuubi to naruto
     "{first}, welcome to the hidden leaf village!",  # Naruto thingies end here
-    "In the jungle, you must wait...until the dice read five or eight.",  #Jumanji stuff
+    "In the jungle, you must wait...until the dice read five or eight.",  # Jumanji stuff
     "Dr.{first} Famed archeologist and international explorer,\nWelcome to Jumanji!\nJumanji's Fate is up to you now.",
-    "{first}, this will not be an easy mission - monkeys slow the expedition.",  #End of Jumanji stuff
+    # End of Jumanji stuff
+    "{first}, this will not be an easy mission - monkeys slow the expedition.",
 ]
 DEFAULT_GOODBYE_MESSAGES = [
     "{first} will be missed.",

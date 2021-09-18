@@ -114,12 +114,14 @@ async def progress(current, total, message, start, type_of_ps, file_name=None):
             round(percentage, 2),
         )
         tmp = progress_str + "{0} of {1}\nETA: {2}".format(
-            humanbytes(current), humanbytes(total), time_formatter(estimated_total_time)
+            humanbytes(current), humanbytes(
+                total), time_formatter(estimated_total_time)
         )
         if file_name:
             try:
                 await message.edit(
-                    "{}\n**File Name:** `{}`\n{}".format(type_of_ps, file_name, tmp)
+                    "{}\n**File Name:** `{}`\n{}".format(
+                        type_of_ps, file_name, tmp)
                 )
             except FloodWait as e:
                 await asyncio.sleep(e.x)
@@ -410,7 +412,7 @@ def get_url(message_1: Message) -> Union[str, None]:
     if offset in (None,):
         return None
 
-    return text[offset : offset + length]
+    return text[offset: offset + length]
 
 
 async def fetch(url):

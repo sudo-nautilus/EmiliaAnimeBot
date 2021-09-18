@@ -272,7 +272,8 @@ def weebify(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/weebify <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/weebify <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -300,7 +301,8 @@ def bubble(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/bubble <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/bubble <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -328,7 +330,8 @@ def fbubble(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/fbubble <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/fbubble <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -356,7 +359,8 @@ def square(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/square <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/square <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -384,7 +388,8 @@ def fsquare(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/fsquare <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/fsquare <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -412,7 +417,8 @@ def blue(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/blue <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/blue <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -440,7 +446,8 @@ def latin(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/latin <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/latin <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -468,7 +475,8 @@ def lined(update, context):
         string = "  ".join(args).lower()
 
     if not string:
-        message.reply_text("Usage is `/lined <text>`", parse_mode=ParseMode.MARKDOWN)
+        message.reply_text("Usage is `/lined <text>`",
+                           parse_mode=ParseMode.MARKDOWN)
         return
 
     for normiecharacter in string:
@@ -480,6 +488,8 @@ def lined(update, context):
         message.reply_to_message.reply_text(string)
     else:
         message.reply_text(string)
+
+
 __help__ = """
  - /weebify <text>: weebify your text!
  - /bubble <text>: bubble your text!

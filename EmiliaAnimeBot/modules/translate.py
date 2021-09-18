@@ -53,7 +53,6 @@ async def _(event):
         """
 
 # help = """
-#- /tr [List of Language Codes](t.me/fateunionupdates/32) :- as reply to a long message.
-#"""
+# - /tr [List of Language Codes](t.me/fateunionupdates/32) :- as reply to a long message.
+# """
 #__mod_name__= "Translator"
-

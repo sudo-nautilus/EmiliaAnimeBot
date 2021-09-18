@@ -1,3 +1,4 @@
+import socket
 import json
 import sys
 from random import randint
@@ -38,7 +39,6 @@ print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ(ARQ_API_URL, ARQ_API_KEY, aiohttpsession)
 
 app = pbot
-import socket
 
 
 async def _netcat(host, port, content):
@@ -62,8 +62,10 @@ async def paste(content):
 async def inline_help_func(__HELP__):
     buttons = InlineKeyboard(row_width=2)
     buttons.add(
-        InlineKeyboardButton("Get More Help.", url=f"t.me/{BOT_USERNAME}?start=start"),
-        InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(
+            "Get More Help.", url=f"t.me/{BOT_USERNAME}?start=start"),
+        InlineKeyboardButton(
+            "Go Inline!", switch_inline_query_current_chat=""),
     )
     answerss = [
         InlineQueryResultArticle(
@@ -84,7 +86,8 @@ async def alive_function(answers):
     # ubot_state = 'Dead' if not await app2.get_me() else 'Alive'
     buttons.add(
         InlineKeyboardButton("Main Bot", url="https://t.me/EmiliaAnimeRobot"),
-        InlineKeyboardButton("Go Inline!", switch_inline_query_current_chat=""),
+        InlineKeyboardButton(
+            "Go Inline!", switch_inline_query_current_chat=""),
     )
 
     msg = f"""
@@ -143,7 +146,8 @@ __**Translated from {i.src} to {lang}**__
                 input_message_content=InputTextMessageContent(msg),
             ),
             InlineQueryResultArticle(
-                title=i.text, input_message_content=InputTextMessageContent(i.text)
+                title=i.text, input_message_content=InputTextMessageContent(
+                    i.text)
             ),
         ]
     )
@@ -435,7 +439,8 @@ async def ping_func(answers):
     ping = f"{str(round((t2 - t1), 2))} Seconds"
     answers.append(
         InlineQueryResultArticle(
-            title=ping, input_message_content=InputTextMessageContent(f"__**{ping}**__")
+            title=ping, input_message_content=InputTextMessageContent(
+                f"__**{ping}**__")
         )
     )
     return answers
@@ -446,7 +451,8 @@ async def pokedexinfo(answers, pokemon):
     result = await fetch(Pokemon)
     buttons = InlineKeyboard(row_width=1)
     buttons.add(
-        InlineKeyboardButton("Pokedex", switch_inline_query_current_chat="pokedex")
+        InlineKeyboardButton(
+            "Pokedex", switch_inline_query_current_chat="pokedex")
     )
     caption = f"""
 **Pokemon:** `{result['name']}`

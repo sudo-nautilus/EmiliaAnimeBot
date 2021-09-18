@@ -16,6 +16,7 @@ GIF_ID = 'CgACAgUAAx0EVmwfqQACElhfo3yZv1njCC11INcQSAi4UlN8vwACqwADg_8wVeGSv41OYU
 
 PHOTO = 'https://i.imgur.com/UjiCJhZ.jpg'
 
+
 @run_async
 def runs(update: Update, context: CallbackContext):
     update.effective_message.reply_text(random.choice(fun_strings.RUN_STRINGS))
@@ -23,8 +24,10 @@ def runs(update: Update, context: CallbackContext):
 
 @run_async
 def igris(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(random.choice(fun_strings.IGRIS_STRINGS))
-                                                
+    update.effective_message.reply_text(
+        random.choice(fun_strings.IGRIS_STRINGS))
+
+
 @run_async
 def arise(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -32,7 +35,7 @@ def arise(update: Update, context: CallbackContext):
     reply_photo = message.reply_to_message.reply_photo if message.reply_to_message else message.reply_photo
     reply_photo(
         random.choice(fun_strings.IGRIS_IMG), caption=f'*Command Me {name}*')
-     
+
 
 @run_async
 def senpai(update: Update, context: CallbackContext):
@@ -42,9 +45,12 @@ def senpai(update: Update, context: CallbackContext):
     reply_photo(
         random.choice(fun_strings.CUTVEIN_IMG), caption=f'*here I am for you {name} senpai , I will destroy you..*')
 
+
 @run_async
 def truth(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(random.choice(fun_strings.TRUTH_STRINGS))
+    update.effective_message.reply_text(
+        random.choice(fun_strings.TRUTH_STRINGS))
+
 
 @run_async
 def insult(update: Update, _):
@@ -52,10 +58,13 @@ def insult(update: Update, _):
     reply_text = msg.reply_to_message.reply_text if msg.reply_to_message else msg.reply_text
     reply_text(random.choice(fun_strings.INSULT_STRINGS))
 
+
 @run_async
 def dare(update: Update, context: CallbackContext):
-    update.effective_message.reply_text(random.choice(fun_strings.DARE_STRINGS))
-    
+    update.effective_message.reply_text(
+        random.choice(fun_strings.DARE_STRINGS))
+
+
 @run_async
 def sanitize(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -219,6 +228,7 @@ def table(update: Update, context: CallbackContext):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_text(random.choice(fun_strings.TABLE))
 
+
 __help__ = """
  • `/runs`*:* reply a random string from an array of replies
  • `/slap`*:* slap a user, or get slapped if not a reply 🌝
@@ -245,8 +255,8 @@ __help__ = """
 """
 
 INSULT_HANDLER = DisableAbleCommandHandler("insult", insult)
-ARISE_HANDLER = DisableAbleCommandHandler("arise", arise)   
-SENPAI_HANDLER = DisableAbleCommandHandler("senpai", senpai)                                   
+ARISE_HANDLER = DisableAbleCommandHandler("arise", arise)
+SENPAI_HANDLER = DisableAbleCommandHandler("senpai", senpai)
 IGRIS_HANDLER = DisableAbleCommandHandler("igris", igris)
 TRUTH_HANDLER = DisableAbleCommandHandler("truth", truth)
 DARE_HANDLER = DisableAbleCommandHandler("dare", dare)
@@ -263,8 +273,8 @@ DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
 
 dispatcher.add_handler(INSULT_HANDLER)
-dispatcher.add_handler(ARISE_HANDLER)     
-dispatcher.add_handler(SENPAI_HANDLER)                                     
+dispatcher.add_handler(ARISE_HANDLER)
+dispatcher.add_handler(SENPAI_HANDLER)
 dispatcher.add_handler(IGRIS_HANDLER)
 dispatcher.add_handler(TRUTH_HANDLER)
 dispatcher.add_handler(DARE_HANDLER)
@@ -286,7 +296,7 @@ __command_list__ = [
     "table", "pat", "sanitize", "senpai"
 ]
 __handlers__ = [
-    RUNS_HANDLER,IGRIS_HANDLER,ARISE_HANDLER,SENPAI_HANDLER,TRUTH_HANDLER, DARE_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
-    SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER,INSULT_HANDLER, 
+    RUNS_HANDLER, IGRIS_HANDLER, ARISE_HANDLER, SENPAI_HANDLER, TRUTH_HANDLER, DARE_HANDLER, SLAP_HANDLER, PAT_HANDLER, ROLL_HANDLER, TOSS_HANDLER,
+    SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER, INSULT_HANDLER,
     SANITIZE_HANDLER
 ]

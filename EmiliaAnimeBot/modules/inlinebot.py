@@ -360,7 +360,8 @@ async def inline_query_handler(client, query):
                 rr = requests.get(lemk)
                 soup = BeautifulSoup(rr.content, "html5lib")
                 script = soup.find("script", type="text/javascript")
-                leek = re.search(r'href=[\'"]?([^\'" >]+)', script.text).group()
+                leek = re.search(
+                    r'href=[\'"]?([^\'" >]+)', script.text).group()
                 dl_link = leek[5:]
 
                 results.append(
@@ -370,7 +371,8 @@ async def inline_query_handler(client, query):
                         caption=capt,
                         reply_markup=InlineKeyboardMarkup(
                             [
-                                [InlineKeyboardButton("Download Link", url=lemk)],
+                                [InlineKeyboardButton(
+                                    "Download Link", url=lemk)],
                                 [
                                     InlineKeyboardButton(
                                         "Direct Download Link", url=dl_link
@@ -419,7 +421,8 @@ async def inline_query_handler(client, query):
             odds = soup.findAll("tr", "odd")
             mov_title = odds[0].findNext("td").findNext("td").text
             mov_link = (
-                "http://www.imdb.com/" + odds[0].findNext("td").findNext("td").a["href"]
+                "http://www.imdb.com/" +
+                odds[0].findNext("td").findNext("td").a["href"]
             )
             page1 = requests.get(mov_link)
             soup = BeautifulSoup(page1.content, "lxml")
@@ -454,7 +457,8 @@ async def inline_query_handler(client, query):
                 actors.pop()
                 stars = actors[0] + "," + actors[1] + "," + actors[2]
             if soup.find("div", "inline canwrap"):
-                story_line = soup.find("div", "inline canwrap").findAll("p")[0].text
+                story_line = soup.find(
+                    "div", "inline canwrap").findAll("p")[0].text
             else:
                 story_line = "Not available"
             info = soup.findAll("div", "txt-block")
@@ -836,8 +840,10 @@ async def inline_query_handler(client, query):
             if response_api["cod"] == 200:
                 country_code = response_api["sys"]["country"]
                 country_time_zone = int(response_api["timezone"])
-                sun_rise_time = int(response_api["sys"]["sunrise"]) + country_time_zone
-                sun_set_time = int(response_api["sys"]["sunset"]) + country_time_zone
+                sun_rise_time = int(
+                    response_api["sys"]["sunrise"]) + country_time_zone
+                sun_set_time = int(
+                    response_api["sys"]["sunset"]) + country_time_zone
                 lol = """ 
         WEATHER INFO GATHERED
         Location: {}
@@ -857,9 +863,11 @@ async def inline_query_handler(client, query):
                     response_api["wind"]["speed"],
                     response_api["clouds"]["all"],
                     # response_api["main"]["pressure"],
-                    time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(sun_rise_time)),
+                    time.strftime("%Y-%m-%d %H:%M:%S",
+                                  time.gmtime(sun_rise_time)),
                     country_code,
-                    time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime(sun_set_time)),
+                    time.strftime("%Y-%m-%d %H:%M:%S",
+                                  time.gmtime(sun_set_time)),
                     country_code,
                 )
                 results.append(
@@ -883,7 +891,8 @@ async def inline_query_handler(client, query):
             if len(query_timezone) == 2:
                 result = generate_time(query_timezone, ["countryCode"])
             else:
-                result = generate_time(query_timezone, ["zoneName", "countryName"])
+                result = generate_time(
+                    query_timezone, ["zoneName", "countryName"])
 
             if not result:
                 result = f"Timezone info not available for <b>{lel}</b>"
@@ -917,11 +926,13 @@ async def inline_query_handler(client, query):
                 .text
             )
             app_dev = (
-                results[0].findNext("div", "Vpfmgd").findNext("div", "KoLSrc").text
+                results[0].findNext("div", "Vpfmgd").findNext(
+                    "div", "KoLSrc").text
             )
             app_dev_link = (
                 "https://play.google.com"
-                + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
+                + results[0].findNext("div",
+                                      "Vpfmgd").findNext("a", "mnKHRc")["href"]
             )
             app_rating = (
                 results[0]

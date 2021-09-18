@@ -47,7 +47,7 @@ dictionary = PyDictionary()
 
 @register(pattern="^/define")
 async def _(event):
-    text = event.text[len("/define ") :]
+    text = event.text[len("/define "):]
     word = f"{text}"
     let = dictionary.meaning(word)
     set = str(let)
@@ -59,7 +59,7 @@ async def _(event):
 
 @register(pattern="^/synonyms")
 async def _(event):
-    text = event.text[len("/synonyms ") :]
+    text = event.text[len("/synonyms "):]
     word = f"{text}"
     let = dictionary.synonym(word)
     set = str(let)
@@ -71,7 +71,7 @@ async def _(event):
 
 @register(pattern="^/antonyms")
 async def _(event):
-    text = message.text[len("/antonyms ") :]
+    text = message.text[len("/antonyms "):]
     word = f"{text}"
     let = dictionary.antonym(word)
     set = str(let)
@@ -81,7 +81,6 @@ async def _(event):
     await event.reply(got)
 
 
-
 __help__ = """
  ❍ /define <text>*:* Type the word or expression you want to search\nFor example /define kill
  ❍ /spell*:* while replying to a message, will reply with a grammar corrected version
@@ -89,4 +88,4 @@ __help__ = """
  ❍ /antonyms <word>*:* Find the antonyms of a word
 """
 
-__mod_name__= "English"
+__mod_name__ = "English"

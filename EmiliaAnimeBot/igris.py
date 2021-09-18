@@ -2,6 +2,8 @@ from telethon import events
 from EmiliaAnimeBot import telethn
 
 """Triggers start command in pm and in groupchats"""
+
+
 def igrisbot(**args):
     """New message."""
     pattern = args.get('pattern', None)

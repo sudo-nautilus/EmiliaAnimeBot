@@ -40,7 +40,7 @@ def no_longer_afk(update: Update, context: CallbackContext):
 
     res = sql.rm_afk(user.id)
     if res:
-        if message.new_chat_members:  #dont say msg
+        if message.new_chat_members:  # dont say msg
             return
         firstname = update.effective_user.first_name
         try:
@@ -50,7 +50,8 @@ def no_longer_afk(update: Update, context: CallbackContext):
                 'Welcome back! {}', 'Where is {}?\nIn the chat!'
             ]
             chosen_option = random.choice(options)
-            update.effective_message.reply_text(chosen_option.format(firstname))
+            update.effective_message.reply_text(
+                chosen_option.format(firstname))
         except:
             return
 
@@ -62,7 +63,7 @@ def reply_afk(update: Update, context: CallbackContext):
     userc = update.effective_user
     userc_id = userc.id
     if message.entities and message.parse_entities(
-        [MessageEntity.TEXT_MENTION, MessageEntity.MENTION]):
+            [MessageEntity.TEXT_MENTION, MessageEntity.MENTION]):
         entities = message.parse_entities(
             [MessageEntity.TEXT_MENTION, MessageEntity.MENTION])
 

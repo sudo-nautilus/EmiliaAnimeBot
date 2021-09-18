@@ -6,13 +6,13 @@ import telegram
 from EmiliaAnimeBot import BAN_STICKER, TIGERS, WOLVES, dispatcher
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (bot_admin,
-                                                           can_restrict,
-                                                           is_user_admin,
-                                                           user_admin,
-                                                           user_admin_no_reply)
+                                                             can_restrict,
+                                                             is_user_admin,
+                                                             user_admin,
+                                                             user_admin_no_reply)
 from EmiliaAnimeBot.modules.helper_funcs.extraction import (extract_text,
-                                                          extract_user,
-                                                          extract_user_and_text)
+                                                            extract_user,
+                                                            extract_user_and_text)
 from EmiliaAnimeBot.modules.helper_funcs.filters import CustomFilters
 from EmiliaAnimeBot.modules.helper_funcs.misc import split_message
 from EmiliaAnimeBot.modules.helper_funcs.string_handling import split_quotes
@@ -84,7 +84,6 @@ def warn(user: User,
 
         for warn_reason in reasons:
             reply += f"\n - {html.escape(warn_reason)}"
-
 
         keyboard = None
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
@@ -235,7 +234,8 @@ def warns(update: Update, context: CallbackContext):
                 f"User has {num_warns}/{limit} warns, but no reasons for any of them."
             )
     else:
-        update.effective_message.reply_text("This user doesn't have any warns!")
+        update.effective_message.reply_text(
+            "This user doesn't have any warns!")
 
 
 # Dispatcher handler stop - do not async
@@ -340,7 +340,7 @@ def reply_filter(update: Update, context: CallbackContext) -> str:
     message: Optional[Message] = update.effective_message
     user: Optional[User] = update.effective_user
 
-    if not user:  #Ignore channel
+    if not user:  # Ignore channel
         return
 
     if user.id == 777000:

@@ -50,4 +50,3 @@ SNIPE_HANDLER = CommandHandler(
     filters=CustomFilters.sudo_filter)
 
 dispatcher.add_handler(SNIPE_HANDLER)
-

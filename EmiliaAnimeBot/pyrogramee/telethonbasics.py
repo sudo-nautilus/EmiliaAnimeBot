@@ -31,7 +31,8 @@ async def convert_to_image(event, borg):
         else:
             lel = await borg.send_message(
                 event.chat_id,
-                "Downloaded to `{}` successfully.".format(downloaded_file_name),
+                "Downloaded to `{}` successfully.".format(
+                    downloaded_file_name),
             )
             await lel.delete
     if not os.path.exists(downloaded_file_name):
@@ -89,7 +90,8 @@ async def take_screen_shot(
         duration,
     )
     ttl = duration // 2
-    thumb_image_path = path or os.path.join(sedpath, f"{basename(video_file)}.jpg")
+    thumb_image_path = path or os.path.join(
+        sedpath, f"{basename(video_file)}.jpg")
     command = f'''ffmpeg -ss {ttl} -i "{video_file}" -vframes 1 "{thumb_image_path}"'''
     err = (await runcmd(command))[1]
     if err:
@@ -142,7 +144,8 @@ async def progress(current, total, event, start, type_of_ps, file_name=None):
             round(percentage, 2),
         )
         tmp = progress_str + "{0} of {1}\nETA: {2}".format(
-            humanbytes(current), humanbytes(total), time_formatter(estimated_total_time)
+            humanbytes(current), humanbytes(
+                total), time_formatter(estimated_total_time)
         )
         if file_name:
             await event.edit(

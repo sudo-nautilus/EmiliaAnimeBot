@@ -29,7 +29,7 @@ def shorten(description, info='anilist.co'):
     return msg
 
 
-#time formatter from uniborg
+# time formatter from uniborg
 def t(milliseconds: int) -> str:
     """Inputs time in milliseconds, to get beautified time,
     as string"""
@@ -159,6 +159,7 @@ query ($id: Int,$search: String) {
 
 url = 'https://graphql.anilist.co'
 
+
 @run_async
 def airing(update: Update, context: CallbackContext):
     message = update.effective_message
@@ -182,6 +183,7 @@ def airing(update: Update, context: CallbackContext):
     else:
         msg += f"\n*Episode*:{response['episodes']}\n*Status*: `N/A`"
     update.effective_message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
+
 
 @run_async
 def anime(update: Update, context: CallbackContext):
@@ -424,7 +426,7 @@ def user(update: Update, context: CallbackContext):
                    InlineKeyboardButton(
                        close_btn,
                        callback_data=f"anime_close, {message.from_user.id}")
-               ]]
+    ]]
 
     update.effective_message.reply_photo(
         photo=img,

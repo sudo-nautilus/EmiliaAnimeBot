@@ -7,7 +7,7 @@ from EmiliaAnimeBot.modules.connection import connected
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.alternate import send_message
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (user_admin,
-                                                           user_not_admin)
+                                                             user_not_admin)
 from EmiliaAnimeBot.modules.helper_funcs.misc import split_message
 from EmiliaAnimeBot.modules.helper_funcs.string_handling import extract_time
 
@@ -306,9 +306,9 @@ def blacklist_mode(update: Update, context: CallbackContext):
                 settypeblacklist)
         send_message(update.effective_message, text, parse_mode="markdown")
         return "<b>{}:</b>\n" \
-          "<b>Admin:</b> {}\n" \
-          "Changed sticker blacklist mode. users will be {}.".format(html.escape(chat.title),
-                         mention_html(user.id, html.escape(user.first_name)), settypeblacklist)
+            "<b>Admin:</b> {}\n" \
+            "Changed sticker blacklist mode. users will be {}.".format(html.escape(chat.title),
+                                                                       mention_html(user.id, html.escape(user.first_name)), settypeblacklist)
     else:
         getmode, getvalue = sql.get_blacklist_setting(chat.id)
         if getmode == 0:

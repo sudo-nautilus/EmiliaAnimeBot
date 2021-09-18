@@ -140,7 +140,6 @@ class InlineQueryResultAudio(InlineQueryResult):
         )
 
 
-
 #  CREDITS:
 #       THE CODE BELOW THIS LINE IS WRITTEN BY https://github.com/Mahesh0253. [https://t.me/DeletedUser420]
 #       https://github.com/Mahesh0253/pyrogram/blob/inline/pyrogram/types/inline_mode/inline_query_result_cached_document.py

@@ -7,6 +7,7 @@ from EmiliaAnimeBot import pgram as app
 from EmiliaAnimeBot.core.sections import section
 from wbb.utils.dbfunctions import is_gbanned_user, user_global_karma
 
+
 async def get_user_info(user, already=False):
     if not already:
         user = await app.get_users(user)

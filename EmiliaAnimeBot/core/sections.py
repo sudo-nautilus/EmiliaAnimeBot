@@ -2,10 +2,11 @@ n = "\n"
 w = " "
 
 
-bold = lambda x: f"**{x}:** "
-bold_ul = lambda x: f"**--{x}:**-- "
+def bold(x): return f"**{x}:** "
+def bold_ul(x): return f"**--{x}:**-- "
 
-mono = lambda x: f"`{x}`{n}"
+
+def mono(x): return f"`{x}`{n}"
 
 
 def section(

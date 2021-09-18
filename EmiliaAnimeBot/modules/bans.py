@@ -6,7 +6,7 @@ from telegram.ext import CallbackContext, CommandHandler, Filters, run_async
 from telegram.utils.helpers import mention_html
 
 from EmiliaAnimeBot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
-                          WOLVES, dispatcher)
+                            WOLVES, dispatcher)
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (
     bot_admin, can_restrict, connection_status, is_user_admin,
@@ -14,6 +14,7 @@ from EmiliaAnimeBot.modules.helper_funcs.chat_status import (
 from EmiliaAnimeBot.modules.helper_funcs.extraction import extract_user_and_text
 from EmiliaAnimeBot.modules.helper_funcs.string_handling import extract_time
 from EmiliaAnimeBot.modules.log_channel import gloggable, loggable
+
 
 @run_async
 @connection_status
@@ -71,7 +72,8 @@ def ban(update: Update, context: CallbackContext) -> str:
             )
             return log_message
         elif user_id in WOLVES:
-            message.reply_text("Abilities of this Shinobi makes them ban immune!")
+            message.reply_text(
+                "Abilities of this Shinobi makes them ban immune!")
             return log_message
         else:
             message.reply_text("This user has immunity and cannot be banned.")
@@ -112,7 +114,6 @@ def ban(update: Update, context: CallbackContext) -> str:
     return log_message
 
 
-  
 @run_async
 @connection_status
 @bot_admin
@@ -145,10 +146,10 @@ def sban(update: Update, context: CallbackContext) -> str:
 
     if is_user_ban_protected(chat, user_id, member):
         return log_message
-      
+
     if user_id == 777000 or user_id == 1087968824:
         return log_message
-      
+
     log = (
         f"<b>{html.escape(chat.title)}:</b>\n"
         f"#SBANNED\n"
@@ -209,7 +210,8 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if not reason:
-        message.reply_text("You haven't specified a time to ban this user for!")
+        message.reply_text(
+            "You haven't specified a time to ban this user for!")
         return log_message
 
     split_reason = reason.split(None, 1)
@@ -258,7 +260,7 @@ def temp_ban(update: Update, context: CallbackContext) -> str:
 
     return log_message
 
-  
+
 @run_async
 @connection_status
 @bot_admin
@@ -292,7 +294,8 @@ def stemp_ban(update: Update, context: CallbackContext) -> str:
         return log_message
 
     if not reason:
-        message.reply_text("You haven't specified a time to ban this user for!")
+        message.reply_text(
+            "You haven't specified a time to ban this user for!")
         return log_message
 
     split_reason = reason.split(None, 1)
@@ -332,7 +335,7 @@ def stemp_ban(update: Update, context: CallbackContext) -> str:
                              user_id, chat.title, chat.id, excp.message)
     return log_message
 
-  
+
 @run_async
 @connection_status
 @bot_admin
@@ -439,8 +442,8 @@ def skick(update: Update, context: CallbackContext) -> str:
         return log
 
     return log_message
-  
-  
+
+
 @run_async
 @bot_admin
 @can_restrict
@@ -456,7 +459,8 @@ def kickme(update: Update, context: CallbackContext):
     if res:
         update.effective_message.reply_text("Ara Ara! Sayonara!")
     else:
-        update.effective_message.reply_text("The Holy Scriptures make me refrain from doing so...")
+        update.effective_message.reply_text(
+            "The Holy Scriptures make me refrain from doing so...")
 
 
 @run_async

@@ -112,7 +112,7 @@ def separate_sed(sed_string):
                 and sed_string[counter + 1] == delim
             ):
                 sed_string = (
-                    sed_string[:counter] + sed_string[counter + 1 :]
+                    sed_string[:counter] + sed_string[counter + 1:]
                 )
 
             elif sed_string[counter] == delim:

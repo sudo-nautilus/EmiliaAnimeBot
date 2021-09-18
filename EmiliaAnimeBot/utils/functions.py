@@ -5,7 +5,7 @@ def get_urls_from_text(text: str) -> bool:
                 ()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))""".strip()
     return [x[0] for x in findall(regex, str(text))]
 
-  
+
   def test_speedtest():
     def speed_convert(size):
         power = 2 ** 10

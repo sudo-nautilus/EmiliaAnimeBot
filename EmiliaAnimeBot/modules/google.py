@@ -34,7 +34,7 @@ opener.addheaders = [("User-agent", useragent)]
 async def _(event):
     if event.fwd_from:
         return
-    
+
     webevent = await event.reply("searching........")
     match = event.pattern_match.group(1)
     page = re.findall(r"page=\d+", match)
@@ -60,11 +60,12 @@ async def _(event):
         "**Search Query:**\n`" + match + "`\n\n**Results:**\n" + msg, link_preview=False
     )
 
+
 @register(pattern="^/img (.*)")
 async def img_sampler(event):
     if event.fwd_from:
         return
-    
+
     query = event.pattern_match.group(1)
     jit = f'"{query}"'
     downloader.download(
@@ -95,7 +96,7 @@ async def okgoogle(img):
     """ For .reverse command, Google search images and stickers. """
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
-    
+
     message = await img.get_reply_message()
     if message and message.media:
         photo = io.BytesIO()
@@ -116,8 +117,10 @@ async def okgoogle(img):
         image.close()
         # https://stackoverflow.com/questions/23270175/google-reverse-image-search-using-post-request#28792943
         searchUrl = "https://www.google.com/searchbyimage/upload"
-        multipart = {"encoded_image": (name, open(name, "rb")), "image_content": ""}
-        response = requests.post(searchUrl, files=multipart, allow_redirects=False)
+        multipart = {"encoded_image": (
+            name, open(name, "rb")), "image_content": ""}
+        response = requests.post(
+            searchUrl, files=multipart, allow_redirects=False)
         fetchUrl = response.headers["Location"]
 
         if response != 400:
@@ -208,7 +211,7 @@ async def scam(results, lim):
 
 @register(pattern="^/app (.*)")
 async def apk(e):
-    
+
     try:
         app_name = e.pattern_match.group(1)
         remove_space = app_name.split(" ")
@@ -220,12 +223,15 @@ async def apk(e):
         soup = bs4.BeautifulSoup(page.content, "lxml", from_encoding="utf-8")
         results = soup.findAll("div", "ZmHEEd")
         app_name = (
-            results[0].findNext("div", "Vpfmgd").findNext("div", "WsMG1c nnK0zc").text
+            results[0].findNext("div", "Vpfmgd").findNext(
+                "div", "WsMG1c nnK0zc").text
         )
-        app_dev = results[0].findNext("div", "Vpfmgd").findNext("div", "KoLSrc").text
+        app_dev = results[0].findNext(
+            "div", "Vpfmgd").findNext("div", "KoLSrc").text
         app_dev_link = (
             "https://play.google.com"
-            + results[0].findNext("div", "Vpfmgd").findNext("a", "mnKHRc")["href"]
+            + results[0].findNext("div",
+                                  "Vpfmgd").findNext("a", "mnKHRc")["href"]
         )
         app_rating = (
             results[0]

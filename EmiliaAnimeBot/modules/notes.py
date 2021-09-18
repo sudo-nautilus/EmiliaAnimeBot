@@ -1,4 +1,5 @@
-import re, ast
+import re
+import ast
 from io import BytesIO
 from typing import Optional
 
@@ -7,7 +8,7 @@ from EmiliaAnimeBot import LOGGER, JOIN_LOGGER, SUPPORT_CHAT, dispatcher, DRAGON
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import user_admin, connection_status
 from EmiliaAnimeBot.modules.helper_funcs.misc import (build_keyboard,
-                                                    revert_buttons)
+                                                      revert_buttons)
 from EmiliaAnimeBot.modules.helper_funcs.msg_types import get_note_type
 from EmiliaAnimeBot.modules.helper_funcs.string_handling import escape_invalid_curly_brackets
 from telegram import (MAX_MESSAGE_LENGTH, InlineKeyboardMarkup, Message,
@@ -103,7 +104,7 @@ def get(update, context, notename, show_none=True, no_format=False):
                             message.from_user.first_name, message.from_user
                             .last_name
                         ] if message.from_user.last_name else
-                                 [message.from_user.first_name])),
+                            [message.from_user.first_name])),
                     username="@" + message.from_user.username
                     if message.from_user.username else mention_markdown(
                         message.from_user.id, message.from_user.first_name),

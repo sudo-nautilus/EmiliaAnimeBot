@@ -16,6 +16,7 @@ client = MongoClient(MONGO_DB_URI)
 db = client["yumekojabamibot"]
 gbanned = db.gban
 
+
 def register(**args):
     """ Registers a new message. """
     pattern = args.get("pattern", None)
@@ -96,7 +97,8 @@ def bot(**args):
         try:
             cmd = re.search(reg, pattern)
             try:
-                cmd = cmd.group(1).replace("$", "").replace("\\", "").replace("^", "")
+                cmd = cmd.group(1).replace("$", "").replace(
+                    "\\", "").replace("^", "")
             except BaseException:
                 pass
 
@@ -119,12 +121,12 @@ def bot(**args):
                 print("i don't work in channels")
                 return
             if check.is_group:
-               if check.chat.megagroup:
-                  pass
-               else:
-                  print("i don't work in small chats")
-                  return
-                          
+                if check.chat.megagroup:
+                    pass
+                else:
+                    print("i don't work in small chats")
+                    return
+
             users = gbanned.find({})
             for c in users:
                 if check.sender_id == c["user"]:

@@ -11,7 +11,7 @@ SUDOERS = OWNER_ID
 
 tasks = {}
 TASKS_LOCK = Lock()
-arrow = lambda x: (x.text if x else "") + "\n`→`"
+def arrow(x): return (x.text if x else "") + "\n`→`"
 
 
 def all_tasks():
@@ -82,4 +82,3 @@ async def _get_tasks_text():
             indent=8,
         )
     return text
-

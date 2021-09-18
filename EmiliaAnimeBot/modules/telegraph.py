@@ -1,11 +1,11 @@
+from telegraph import Telegraph, upload_file, exceptions
+from datetime import datetime
+from PIL import Image
+import os
+from telethon import events
 from EmiliaAnimeBot.tevents import register
 from EmiliaAnimeBot import telethn as tbot
 TMP_DOWNLOAD_DIRECTORY = "./"
-from telethon import events
-import os
-from PIL import Image
-from datetime import datetime
-from telegraph import Telegraph, upload_file, exceptions
 emilia = "EMILIA"
 telegraph = Telegraph()
 r = telegraph.create_account(short_name=emilia)
@@ -44,7 +44,7 @@ async def _(event):
                 await h.edit("Uploaded to https://telegra.ph{}".format(media_urls[0]), link_preview=True)
         elif input_str == "xt":
             user_object = await tbot.get_entity(r_message.sender_id)
-            title_of_page = user_object.first_name # + " " + user_object.last_name
+            title_of_page = user_object.first_name  # + " " + user_object.last_name
             # apparently, all Users do not have last_name field
             if optional_title:
                 title_of_page = optional_title

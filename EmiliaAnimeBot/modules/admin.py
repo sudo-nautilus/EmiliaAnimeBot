@@ -8,11 +8,11 @@ from telegram.utils.helpers import mention_html, mention_markdown, escape_markdo
 from EmiliaAnimeBot import DRAGONS, dispatcher
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (bot_admin, can_pin,
-                                                           can_promote,
-                                                           connection_status,
-                                                           user_admin)
+                                                             can_promote,
+                                                             connection_status,
+                                                             user_admin)
 from EmiliaAnimeBot.modules.helper_funcs.extraction import (extract_user,
-                                                          extract_user_and_text)
+                                                            extract_user_and_text)
 from EmiliaAnimeBot.modules.log_channel import loggable
 from EmiliaAnimeBot.modules.helper_funcs.alternate import send_message
 
@@ -375,7 +375,7 @@ def adminlist(update, context):
             administrators.remove(admin)
             continue
 
-        #if user.username:
+        # if user.username:
         #    name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n 👑 Creator:"
@@ -400,7 +400,7 @@ def adminlist(update, context):
             name = "{}".format(
                 mention_markdown(user.id, user.first_name + " " +
                                  (user.last_name or "")))
-        #if user.username:
+        # if user.username:
         #    name = escape_markdown("@" + user.username)
         if status == "administrator":
             if custom_title:

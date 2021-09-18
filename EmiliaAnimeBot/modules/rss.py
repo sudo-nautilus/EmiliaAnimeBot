@@ -119,7 +119,8 @@ def add_url(update: Update, context: CallbackContext):
             else:
                 sql.add_url(tg_chat_id, tg_feed_link, tg_old_entry_link)
 
-                update.effective_message.reply_text("Added URL to subscription")
+                update.effective_message.reply_text(
+                    "Added URL to subscription")
         else:
             update.effective_message.reply_text(
                 "This link is not an RSS Feed link")

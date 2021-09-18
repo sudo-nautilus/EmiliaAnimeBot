@@ -15,7 +15,7 @@ from telegram.error import BadRequest
 from telegram.utils.helpers import escape_markdown, mention_html
 
 from EmiliaAnimeBot import (DEV_USERS, OWNER_ID, DRAGONS, DEMONS, TIGERS, WOLVES,
-                          INFOPIC, dispatcher, sw)
+                            INFOPIC, dispatcher, sw)
 from EmiliaAnimeBot.__main__ import STATS, TOKEN, USER_INFO
 import EmiliaAnimeBot.modules.sql.userinfo_sql as sql
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
@@ -289,7 +289,6 @@ def info(update: Update, context: CallbackContext):
         text += "\n\nThis User is Immune to Automated Restrictions"
         disaster_level_present = True
 
-
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
@@ -313,15 +312,16 @@ def info(update: Update, context: CallbackContext):
 
     if INFOPIC:
         try:
-            profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
+            profile = context.bot.get_user_profile_photos(
+                user.id).photos[0][-1]
             context.bot.sendChatAction(chat.id, "upload_photo")
             context.bot.send_photo(
-            chat.id,
-            photo=profile,
-            caption=(text),
-            parse_mode=ParseMode.HTML,
-            disable_web_page_preview=True,
-        )
+                chat.id,
+                photo=profile,
+                caption=(text),
+                parse_mode=ParseMode.HTML,
+                disable_web_page_preview=True,
+            )
         # Incase user don't have profile pic, send normal text
         except IndexError:
             message.reply_text(

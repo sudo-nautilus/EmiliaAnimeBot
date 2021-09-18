@@ -72,7 +72,8 @@ def set_cleanbt(chat_id, is_enable):
 def chat_ignore_command(chat_id, ignore):
     ignore = ignore.lower()
     with CLEANER_CHAT_LOCK:
-        ignored = SESSION.query(CleanerBlueTextChat).get((str(chat_id), ignore))
+        ignored = SESSION.query(CleanerBlueTextChat).get(
+            (str(chat_id), ignore))
 
         if not ignored:
 

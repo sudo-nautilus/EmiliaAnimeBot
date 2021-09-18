@@ -5,13 +5,13 @@ from io import BytesIO
 from EmiliaAnimeBot.modules.sql.users_sql import get_user_com_chats
 import EmiliaAnimeBot.modules.sql.global_bans_sql as sql
 from EmiliaAnimeBot import (DEV_USERS, EVENT_LOGS, OWNER_ID, STRICT_GBAN, DRAGONS,
-                          SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
-                          WOLVES, sw, dispatcher)
+                            SUPPORT_CHAT, SPAMWATCH_SUPPORT_CHAT, DEMONS, TIGERS,
+                            WOLVES, sw, dispatcher)
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (is_user_admin,
-                                                           support_plus,
-                                                           user_admin)
+                                                             support_plus,
+                                                             user_admin)
 from EmiliaAnimeBot.modules.helper_funcs.extraction import (extract_user,
-                                                          extract_user_and_text)
+                                                            extract_user_and_text)
 from EmiliaAnimeBot.modules.helper_funcs.misc import send_to_list
 from EmiliaAnimeBot.modules.sql.users_sql import get_all_chats
 from telegram import ParseMode, Update
@@ -158,7 +158,6 @@ def gban(update: Update, context: CallbackContext):
         f"<b>Banned User:</b> {mention_html(user_chat.id, user_chat.first_name)}\n"
         f"<b>Banned User ID:</b> <code>{user_chat.id}</code>\n"
         f"<b>Event Stamp:</b> <code>{current_time}</code>")
-        
 
     if reason:
         if chat.type == chat.SUPERGROUP and chat.username:
@@ -409,7 +408,8 @@ def check_and_ban(update, user_id, should_message=True):
             user = sql.get_gbanned_user(user_id)
             if user.reason:
                 text += f"\n<b>Ban Reason:</b> <code>{html.escape(user.reason)}</code>"
-            update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
+            update.effective_message.reply_text(
+                text, parse_mode=ParseMode.HTML)
 
 
 @run_async

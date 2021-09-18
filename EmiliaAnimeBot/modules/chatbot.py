@@ -27,6 +27,7 @@ __help__ = """
 
 active_chats_bot = []
 
+
 async def chat_bot_toggle(db, message: Message):
     status = message.text.split(None, 1)[1].lower()
     chat_id = message.chat.id

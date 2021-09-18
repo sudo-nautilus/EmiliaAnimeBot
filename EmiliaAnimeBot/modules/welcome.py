@@ -6,7 +6,7 @@ from functools import partial
 
 import EmiliaAnimeBot.modules.sql.welcome_sql as sql
 from EmiliaAnimeBot import (DEV_USERS, LOGGER, OWNER_ID, DRAGONS, DEMONS, TIGERS,
-                          WOLVES, sw, dispatcher, JOIN_LOGGER)
+                            WOLVES, sw, dispatcher, JOIN_LOGGER)
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (
     is_user_ban_protected,
     user_admin,
@@ -36,7 +36,6 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-
 
 
 OWNER_WELCOME_IMG = "https://telegra.ph/file/61a81e8e8f4cb3d16cd90.jpg"
@@ -512,7 +511,7 @@ def left_member(update: Update, context: CallbackContext):
                 return
 
             first_name = (left_mem.first_name or "PersonWithNoName"
-                         )  # edge case of empty name - occurs for some bugs.
+                          )  # edge case of empty name - occurs for some bugs.
             if cust_goodbye:
                 if cust_goodbye == sql.DEFAULT_GOODBYE:
                     cust_goodbye = random.choice(
@@ -569,7 +568,8 @@ def welcome(update: Update, context: CallbackContext):
     # if no args, show current replies.
     if not args or args[0].lower() == "noformat":
         noformat = True
-        pref, welcome_m, cust_content, welcome_type = sql.get_welc_pref(chat.id)
+        pref, welcome_m, cust_content, welcome_type = sql.get_welc_pref(
+            chat.id)
         update.effective_message.reply_text(
             f"This chat has it's welcome setting set to: `{pref}`.\n"
             f"*The welcome message (not filling the {{}}) is:*",
@@ -1033,7 +1033,8 @@ NEW_MEM_HANDLER = MessageHandler(Filters.status_update.new_chat_members,
 LEFT_MEM_HANDLER = MessageHandler(Filters.status_update.left_chat_member,
                                   left_member)
 WELC_PREF_HANDLER = CommandHandler("welcome", welcome, filters=Filters.group)
-GOODBYE_PREF_HANDLER = CommandHandler("goodbye", goodbye, filters=Filters.group)
+GOODBYE_PREF_HANDLER = CommandHandler(
+    "goodbye", goodbye, filters=Filters.group)
 SET_WELCOME = CommandHandler("setwelcome", set_welcome, filters=Filters.group)
 SET_GOODBYE = CommandHandler("setgoodbye", set_goodbye, filters=Filters.group)
 RESET_WELCOME = CommandHandler(
@@ -1048,7 +1049,8 @@ CLEAN_WELCOME = CommandHandler(
     "cleanwelcome", clean_welcome, filters=Filters.group)
 WELCOME_HELP = CommandHandler("welcomehelp", welcome_help)
 WELCOME_MUTE_HELP = CommandHandler("welcomemutehelp", welcome_mute_help)
-BUTTON_VERIFY_HANDLER = CallbackQueryHandler(user_button, pattern=r"user_join_")
+BUTTON_VERIFY_HANDLER = CallbackQueryHandler(
+    user_button, pattern=r"user_join_")
 
 dispatcher.add_handler(NEW_MEM_HANDLER)
 dispatcher.add_handler(LEFT_MEM_HANDLER)

@@ -3,6 +3,7 @@ from typing import Dict, List, Union
 
 karmadb = db.karma
 
+
 async def get_karmas_count() -> dict:
     chats = karmadb.find({"chat_id": {"$lt": 0}})
     if not chats:

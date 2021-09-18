@@ -2,7 +2,7 @@ import html
 
 from EmiliaAnimeBot import (LOGGER, DRAGONS, TIGERS, WOLVES, dispatcher)
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (user_admin,
-                                                           user_not_admin)
+                                                             user_not_admin)
 from EmiliaAnimeBot.modules.log_channel import loggable
 from EmiliaAnimeBot.modules.sql import reporting_sql as sql
 from telegram import (Chat, InlineKeyboardButton, InlineKeyboardMarkup,

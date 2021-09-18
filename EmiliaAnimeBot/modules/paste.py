@@ -21,7 +21,8 @@ def paste(update: Update, context: CallbackContext):
         return
 
     key = (
-        requests.post("https://nekobin.com/api/documents", json={"content": data})
+        requests.post("https://nekobin.com/api/documents",
+                      json={"content": data})
         .json()
         .get("result")
         .get("key")
@@ -41,6 +42,3 @@ dispatcher.add_handler(PASTE_HANDLER)
 
 __command_list__ = ["paste"]
 __handlers__ = [PASTE_HANDLER]
-
-
-
