@@ -12,7 +12,7 @@ from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot.modules.helper_funcs.chat_status import (is_user_admin)
 from EmiliaAnimeBot.modules.helper_funcs.extraction import extract_user
 
-@run_async
+run_async=True
 def quotepics(update: Update, context: CallbackContext):
     message = update.effective_message
     name = message.reply_to_message.from_user.first_name if message.reply_to_message else message.from_user.first_name
