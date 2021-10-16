@@ -53,6 +53,11 @@ async def sed(_, message):
                 text = re.sub(
                     repl, repl_with, to_fix, count=1, flags=re.I
                 ).strip()
+            elif "u" in flags:
+                text = re.sub(
+                    repl, repl_with, to_fix, count=1, flags=re.U
+                ).strip()
+
             elif "g" in flags:
                 text = re.sub(repl, repl_with, to_fix).strip()
             else:
