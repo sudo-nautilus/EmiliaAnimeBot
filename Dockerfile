@@ -3,7 +3,7 @@ FROM python:3.9.7-slim-buster
 
 ENV PIP_NO_CACHE_DIR 1
 
-RUN echo "well.. um..."
+RUN echo "GitHub web editor is hot"
 
 RUN sed -i.bak 's/us-west-2\.ec2\.//' /etc/apt/sources.list
 
