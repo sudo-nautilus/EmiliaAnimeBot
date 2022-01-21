@@ -6,7 +6,7 @@ pykeyboard
 lxml
 beautifulsoup4
 requests
-sqlalchemy==1.4.25
+sqlalchemy==1.4.31
 python-telegram-bot==12.8
 envparse
 faker
